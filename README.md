@@ -1,6 +1,6 @@
 # Typed Local and Session Storage Adapter (tlssa).
 
-Typed Locan and Session Storage Adapter (TLSSA) - A Strictly-typed [Local](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and [Session](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) Storage Adapter for Typescript.
+Typed Local and Session Storage Adapter (TLSSA) - A Strictly typed [Local](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and [Session](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) Storage Adapter for Typescript that uses JSON format when saving to actual storage.
 
 [![Current Release](https://img.shields.io/npm/v/tlssa.svg)](https://www.npmjs.com/package/tlssa)
 [![Licence](https://img.shields.io/github/license/takawitter/tlssa)](https://github.com/takawitter/tlssa/blob/master/LICENSE)
