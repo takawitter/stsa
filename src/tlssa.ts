@@ -27,24 +27,21 @@ export class TypedStorageAdapter<Items extends ItemMap>{
     getOrCreateItem<K extends keyof Items & string>(
         key: K,
         initialValue: Items[K] | ((key: K)=>Items[K])): Items[K]
-    getOrCreateItem(
-        key: string,
-        initialValue: ItemValue | ((key: string)=>ItemValue)): any
     {
         let ret = this.getItem(key);
         if(ret) return ret;
-        ret = typeof initialValue === 'function' ? initialValue(key) : initialValue;
+        ret = typeof initialValue === 'function' ? initialValue(key) as Items[K]: initialValue;
         this.storage.setItem(this.createKey(key), JSON.stringify(ret));
         return ret;
     }
 
     setItem<K extends keyof Items & string>(
-        key: K, value: Items[K]): void;
-    setItem(key: string, value: ItemValue){
+        key: K, value: Items[K]): void
+    {
         this.storage.setItem(this.createKey(key), JSON.stringify(value));
     }
 
-    removeItem<K extends keyof Items & string>(key: K){
+    removeItem<K extends keyof Items & string>(key: K): void{
         this.storage.removeItem(this.createKey(key));
     }
 
@@ -67,7 +64,7 @@ export class TypedStorageAdapter<Items extends ItemMap>{
             this.storage.length;
     }
 
-    clear(){
+    clear(): void{
         if(!this.keyPrefixValid()){
             this.storage.clear();
             return;
