@@ -1,0 +1,59 @@
+{
+  "name": "tsa",
+  "version": "0.0.0",
+  "description": "A strictly typed Storage Adapter for Local and Session Storage.",
+  "main": "dist/tsa.umd.js",
+  "module": "dist/tsa.es.js",
+  "types": "types/tsa.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/tsa.d.ts",
+      "import": "./dist/tsa.es.js",
+      "require": "./dist/tsa.umd.js"
+    }
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "src",
+    "types",
+    "LICENSE",
+    "package-lock.json",
+    "package.json",
+    "README.md",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takawitter/tsa.git"
+  },
+  "keywords": [
+    "event-target",
+    "EventTarget",
+    "type-safe",
+    "strictly-typed",
+    "events",
+    "custom-event",
+    "event-emitter",
+    "dom",
+    "browser",
+    "typescript"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/takawitter/tsa/issues"
+  },
+  "homepage": "https://github.com/takawitter/tsa",
+  "devDependencies": {
+    "typescript": "~6.0.3",
+    "vite": "^8.1.0"
+  },
+  "dependencies": {}
+}
