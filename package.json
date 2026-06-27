@@ -1,6 +1,6 @@
 {
   "name": "tsa",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A strictly typed Storage Adapter for Local and Session Storage.",
   "main": "dist/tsa.umd.js",
   "module": "dist/tsa.es.js",
